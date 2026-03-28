@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #1d2671, #c33764);
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .btn {
+            display: block;
+            width: 300px;
+            margin: 20px auto;
+            padding: 15px;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Welcome {{ session['user'] }}</h1>
+
+<a href="/predict" class="btn">🔬 Predict Blood Cell</a>
+<a href="/history" class="btn">📜 View History</a>
+<a href="/logout" class="btn">🚪 Logout</a>
+
+</body>
+</html>

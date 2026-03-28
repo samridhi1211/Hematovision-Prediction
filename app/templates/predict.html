@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1d2671, #c33764);
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            width: 420px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #1d2671;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c33764;
+        }
+
+        img {
+            margin-top: 15px;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/history">History</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="container">
+    <div class="card">
+
+        <h2>🔬 Blood Cell Prediction</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required><br>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+            <div class="result">Prediction: {{ result }}</div>
+
+            <img src="{{ img_path }}">
+
+            <div class="info">
+                <h4>Cell Info:</h4>
+
+                {% if result == "EOSINOPHIL" %}
+                    <p>Fights parasites and allergies</p>
+                {% elif result == "LYMPHOCYTE" %}
+                    <p>Controls immune system</p>
+                {% elif result == "MONOCYTE" %}
+                    <p>Removes dead cells and pathogens</p>
+                {% elif result == "NEUTROPHIL" %}
+                    <p>First defense against infections</p>
+                {% endif %}
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+
+</body>
+</html>
