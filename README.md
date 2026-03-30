@@ -55,44 +55,4 @@ HTML / CSS / JavaScript
 
 📸 Demo 👉 Upload an image → Click Predict → View result
 
-Screenshot 2026-03-27 233909
-About
-No description, website, or topics provided.
-Resources
- Readme
- Activity
-Stars
- 0 stars
-Watchers
- 0 watching
-Forks
- 0 forks
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-Contributors
-1
-@samridhi1211
-samridhi1211 samridhi gupta
-Languages
-Python
-63.2%
- 
-HTML
-36.8%
-Suggested workflows
-Based on your tech stack
-SLSA Generic generator logo
-SLSA Generic generator
-Generate SLSA3 provenance for your existing release workflows
-Pylint logo
-Pylint
-Lint a Python application with pylint.
-Python Package using Anaconda logo
-Python Package using Anaconda
-Create and test a Python package on multiple Python versions using Anaconda for package management.
-More workflows
-Footer
+<img width="1873" height="892" alt="Screenshot 2026-03-28 144421" src="https://github.com/user-attachments/assets/2cd4764c-0389-4d95-9e2e-32e124a80f7f" />
